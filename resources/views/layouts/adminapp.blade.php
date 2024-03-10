@@ -21,9 +21,9 @@
         <div class="border-end bg-white" id="sidebar-wrapper">
             <div class="sidebar-heading border-bottom bg-light">Semprong Loves</div>
             <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action list-group-item-light p-3 {{ Request::path() === 'admin/dashboard' ? 'bg-secondary text-white' : '' }}"
+                <a class="list-group-item list-group-item-action list-group-item-light p-3 {{ request()->is('admin/dashboard') ? 'bg-secondary text-white' : '' }}"
                     href="{{ route('admin.dashboard') }}">Dashboard</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3 {{ Request::path() === 'admin/pesananmasuk' ? 'bg-secondary text-white' : '' }}"
+                <a class="list-group-item list-group-item-action list-group-item-light p-3 {{ request()->is('admin/pesananmasuk') ? 'bg-secondary text-white' : '' }}"
                     href="{{ route('admin.pesanan') }}">Pesanan</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3 {{ Request::path() === 'admin/riwayatpesanan' ? 'bg-secondary text-white' : '' }}"
                     href="{{ route('admin.riwayat') }}">Riwayat Pesanan</a>
@@ -48,9 +48,9 @@
     @livewireScripts
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="{{ asset('back/css/scripts.js') }}"></script>
+    <script src="{{ asset('back/js/scripts.js') }}"></script>
     <script type="module">
-        import  hotwiredTurbo  from 'https://cdn.skypack.dev/@hotwired/turbo';
+        import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
     </script>
     <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js"
         data-turbolinks-eval="false" data-turbo-eval="false"></script>
